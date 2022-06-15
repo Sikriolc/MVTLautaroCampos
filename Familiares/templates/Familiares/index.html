@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Familiares/style.css' %}">
+    <title>Probando Template</title>
+</head>
+<body>
+    <h1>Familiares</h1>
+    <table>
+        <thead>
+            <td> Nombre </td>
+            <td> Apellido </td>
+            <td> Nacimiento</td>
+            <td> Parentezco </td>
+        </thead>
+
+        {% for familiares in Familia %}
+        <tr>
+            <td> {{familiares.nombre }}</td>
+            <td> {{familiares.apellido }}</td>
+            <td> {{familiares.annonacimiento }}</td>
+            <td> {{familiares.parentezco }}</td>
+
+        </tr>
+        {% endfor %}    
+    </table>
+</body>
+</html>
